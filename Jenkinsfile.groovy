@@ -25,12 +25,10 @@ node {
     }
     if (skipTests != true) {
         stage('Test') {
-//             sh "'${mvnHome}/bin/mvn' -P ${activeProfile} -Dmaven.test.failure.ignore -B verify"
-            echo test
+            echo "test"
         }
         stage('Store Test Results') {
-//             junit '**/target/surefire-reports/TEST-*.xml'
-            echo 'Store Test Results'
+            echo "Store Test Results"
         }
     }
     stage('Build') {
